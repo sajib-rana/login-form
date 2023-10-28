@@ -59,6 +59,11 @@ const RegisterLink = styled.p`
   font-size: 14px;
 `;
 
+const ChangePasswordLink = styled.p`
+  font-size: 14px;
+  text-align: end;
+`;
+
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -90,6 +95,9 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <ChangePasswordLink>
+          <a href="/change-password">Change Password</a>
+        </ChangePasswordLink>
         <CheckboxLabel>
           <Checkbox
             type="checkbox"
